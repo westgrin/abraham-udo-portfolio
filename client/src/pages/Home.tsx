@@ -258,7 +258,7 @@ export default function Home() {
             <div className="section-no">TIMELINE</div>
             <div className="timeline">
               {experiences.map((experience) => (
-                <article className="timeline-item" key={experience.role}>
+                <article className="timeline-item" key={`${experience.date}-${experience.role}`}>
                   <div className="timeline-date">{experience.date}</div>
                   <div><h3 className="timeline-role">{experience.role}</h3><p className="timeline-org">{experience.org}</p><p className="timeline-copy">{experience.copy}</p></div>
                 </article>

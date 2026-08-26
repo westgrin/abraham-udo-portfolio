@@ -7,3 +7,9 @@
 - [x] Add recruiter-oriented storytelling, proof points, and project context without overstating verified work.
 - [x] Integrate the portrait and selected GitHub projects into the existing Signal Ledger design system.
 - [x] Verify desktop and mobile presentation, save an updated checkpoint, and deliver the revised portfolio.
+
+## Browser Error and Publication Readiness
+
+- [x] Inspect the browser console error shown in the preview and record the exact cause: two timeline entries shared the `Industrial Intern` React list key.
+- [x] Apply the smallest safe correction and verify that the error no longer appears.
+- [x] Run production validation, save a publish-ready checkpoint, and provide publication guidance.
