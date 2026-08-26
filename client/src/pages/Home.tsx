@@ -14,11 +14,11 @@ import {
 const projects = [
   {
     id: "PRJ-01",
-    title: "Automated WordPress deployment on AWS",
-    description: "A Terraform-based deployment for a scalable WordPress environment with secure VPC design, load balancing, managed data services, and deployment automation.",
-    outcome: "Outcome: repeatable AWS application foundation",
-    tech: ["AWS", "Terraform", "EC2", "RDS", "GitHub Actions"],
-    href: "https://github.com/westgrin/terraform-wordpress-aws",
+    title: "ECS web application delivery pipeline",
+    description: "A modular infrastructure build that containers a Node.js application, places the image in ECR, provisions an ECS cluster and service, and drives the workflow through Terraform and GitHub Actions.",
+    outcome: "Evidence: containers, registry, orchestration, IaC, automation",
+    tech: ["Terraform", "Docker", "ECR", "ECS", "GitHub Actions"],
+    href: "https://github.com/westgrin/terraform-ecs-webapp",
     className: "hero-project has-image",
     style: { backgroundImage: 'url("/manus-storage/abraham-udo-hero-cloud-topology_5fa28f72.jpg")' },
   },
@@ -34,29 +34,56 @@ const projects = [
   },
   {
     id: "PRJ-03",
-    title: "Gatus uptime monitoring & alerting",
-    description: "Containerized availability monitoring for websites and APIs, with tuned checks and Slack notification routes for incidents.",
-    outcome: "Outcome: active endpoint visibility",
-    tech: ["Gatus", "Docker", "Slack", "YAML"],
-    href: "https://github.com/westgrin/gatus-monitoring",
+    title: "High-availability web tier on AWS",
+    description: "Configured a Launch Template, Application Load Balancer, target group, and CPU-driven Auto Scaling Group; traffic testing verified dynamic instance scaling.",
+    outcome: "Evidence: resilience, scaling policy, traffic distribution",
+    tech: ["AWS", "ALB", "Auto Scaling", "EC2"],
+    href: "https://github.com/westgrin/Load_Balancer_and_Auto_Scaling",
     className: "small-project",
   },
   {
     id: "PRJ-04",
-    title: "Jenkins CI/CD pipeline",
-    description: "Configured a Jenkins workflow to clone, build, and automate Docker image work from GitHub-based repositories.",
-    outcome: "Outcome: repeatable image build workflow",
-    tech: ["Jenkins", "Docker", "GitHub", "Node.js"],
-    href: "https://github.com/westgrin/Jenkins_Freestyle_Project",
+    title: "Terraform modules with remote state control",
+    description: "Created reusable VPC and S3 modules, then configured S3 remote state with DynamoDB locking and a GitHub Actions automation path.",
+    outcome: "Evidence: modular IaC and state governance",
+    tech: ["Terraform", "VPC", "S3", "DynamoDB"],
+    href: "https://github.com/westgrin/terraform-modules-vpc-s3",
     className: "small-project",
   },
   {
     id: "PRJ-05",
-    title: "AWS Cloud Manager shell script",
-    description: "A Bash utility with argument validation and environment-aware logic for managing infrastructure workflows across local, test, and production contexts.",
-    outcome: "Outcome: safer environment-aware operations",
-    tech: ["Bash", "AWS", "Linux", "Git"],
-    href: "https://github.com/westgrin/aws_cloud_manager",
+    title: "Nginx configuration management with Ansible",
+    description: "Automated Nginx installation and site configuration on an AWS EC2 target using an Ansible inventory and separate deployment playbooks.",
+    outcome: "Evidence: repeatable configuration and HTTP validation",
+    tech: ["Ansible", "Nginx", "AWS EC2", "GitHub Actions"],
+    href: "https://github.com/westgrin/ansible-nginx-deployment",
+    className: "small-project",
+  },
+  {
+    id: "PRJ-06",
+    title: "Advanced CI quality gates",
+    description: "Created a modular Node.js CI workflow with version matrices, dependency caching, tests, linting, health checks, and secret-aware configuration.",
+    outcome: "Evidence: quality gates beyond a basic build",
+    tech: ["GitHub Actions", "Jest", "ESLint", "Node.js"],
+    href: "https://github.com/westgrin/Advanced_GitHub_Actions",
+    className: "small-project",
+  },
+  {
+    id: "PRJ-07",
+    title: "Automated WordPress deployment on AWS",
+    description: "Provisioned a scalable WordPress environment with a secure VPC, EC2, RDS, EFS, ALB, Auto Scaling, and Terraform-driven workflow.",
+    outcome: "Evidence: integrated application infrastructure",
+    tech: ["AWS", "Terraform", "RDS", "EFS"],
+    href: "https://github.com/westgrin/terraform-wordpress-aws",
+    className: "small-project",
+  },
+  {
+    id: "PRJ-08",
+    title: "Gatus uptime monitoring & alerting",
+    description: "Containerized availability monitoring for websites and APIs, with tuned checks, dashboard customization, and Slack incident notifications.",
+    outcome: "Evidence: active endpoint visibility",
+    tech: ["Gatus", "Docker", "Slack", "YAML"],
+    href: "https://github.com/westgrin/gatus-monitoring",
     className: "small-project",
   },
 ];
@@ -98,6 +125,7 @@ export default function Home() {
         <a className="rail-logo" href="#top" aria-label="Abraham Udo home">
           <img src="/manus-storage/abraham-udo-logo-mark_5760a7d8.png" alt="AU routing mark" />
         </a>
+        <div className="rail-monogram" aria-hidden="true">AU/</div>
         <nav className="rail-nav" aria-label="Portfolio sections">
           <a href="#work">WORK</a>
           <a href="#stack">STACK</a>
@@ -120,6 +148,7 @@ export default function Home() {
               <div className="brand-lockup"><img src="/manus-storage/abraham-udo-logo-mark_5760a7d8.png" alt="" /><span className="brand-monogram">AU/</span><span className="brand-name">Abraham Udo</span><span className="brand-discipline">Cloud systems</span></div>
               <div className="eyebrow">Infrastructure log · 2026</div>
               <h1 id="hero-title">Abraham <span>Udo.</span></h1>
+              <div className="portrait-mobile"><img src="/manus-storage/abraham-udo-portrait_3561184d.webp" alt="Portrait of Abraham Udo" /><span><strong>Abraham Udo</strong> Cloud & DevOps Engineer</span></div>
               <p className="hero-sub">I build dependable cloud systems through infrastructure as code, thoughtful automation, and observable delivery workflows.</p>
               <div className="hero-actions">
                 <a className="action-primary" href="#work">View project records <ArrowDown size={16} /></a>
@@ -127,6 +156,7 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-aside">
+              <div className="portrait-frame"><img src="/manus-storage/abraham-udo-portrait_3561184d.webp" alt="Abraham Udo, Cloud and DevOps Engineer" /></div>
               <div className="stamp">STATUS: AVAILABLE<br />FOCUS: RELIABILITY</div>
               <p>Cloud infrastructure, delivery automation, and systems that remain visible under load.</p>
             </div>
@@ -151,13 +181,34 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="section section-white" id="team-fit" aria-labelledby="team-fit-title">
+          <div className="section-label">
+            <div className="section-no">02 / TEAM FIT</div>
+            <div>
+              <p className="section-kicker">How I add operational value</p>
+              <h2 className="section-title" id="team-fit-title">More than a tool list: an engineering mindset built for dependable delivery.</h2>
+            </div>
+          </div>
+          <div className="recruiter-grid">
+            <div>
+              <p className="recruiter-lede">I am most useful where a team needs to turn <strong>manual setup into versioned practice</strong>, make deployments easier to trust, and improve the signal around what is running.</p>
+              <div className="role-signal"><span>Ready to contribute in</span><strong>CLOUD / DEVOPS</strong><strong>INFRASTRUCTURE AUTOMATION</strong><strong>PLATFORM OPERATIONS</strong></div>
+            </div>
+            <div className="recruiter-manifest">
+              <div className="manifest-item"><span>01</span><div><h3>Build with repeatability in mind.</h3><p>Terraform modules, Ansible playbooks, and documented workflows make the path from intent to environment clearer and easier to maintain.</p></div></div>
+              <div className="manifest-item"><span>02</span><div><h3>Treat visibility as part of delivery.</h3><p>Health endpoints, Prometheus, Node Exporter, and Gatus reflect an instinct to verify behaviour after systems are deployed.</p></div></div>
+              <div className="manifest-item"><span>03</span><div><h3>Keep operational context clear.</h3><p>My technical documentation, reporting background, and hands-on repositories show a preference for traceable work that teammates can understand and continue.</p></div></div>
+            </div>
+          </div>
+        </section>
+
         <section className="section section-cream" id="work" aria-labelledby="work-title">
           <div className="section-label">
-            <div className="section-no">02 / WORK</div>
+            <div className="section-no">03 / WORK</div>
             <div>
               <p className="section-kicker">Selected deployment records</p>
               <h2 className="section-title" id="work-title">Projects that turn platform concepts into working infrastructure.</h2>
-              <p className="section-intro">Each record captures a real learning build across provisioning, delivery, containers, monitoring, and operational scripting.</p>
+              <p className="section-intro">The lead records below are selected from my public GitHub work because they connect real implementation steps across provisioning, delivery, containers, monitoring, and configuration management.</p>
             </div>
           </div>
           <div className="project-grid">
@@ -176,7 +227,7 @@ export default function Home() {
 
         <section className="section section-white" id="stack" aria-labelledby="stack-title">
           <div className="section-label">
-            <div className="section-no">03 / STACK</div>
+            <div className="section-no">04 / STACK</div>
             <div>
               <p className="section-kicker">Tools I reach for</p>
               <h2 className="section-title" id="stack-title">A working stack for automated, observable cloud delivery.</h2>
@@ -197,7 +248,7 @@ export default function Home() {
 
         <section className="section section-dark" id="experience" aria-labelledby="experience-title">
           <div className="section-label">
-            <div className="section-no">04 / PATH</div>
+            <div className="section-no">05 / PATH</div>
             <div>
               <p className="section-kicker">Experience & foundations</p>
               <h2 className="section-title" id="experience-title">Documentation discipline, technical practice, and an evolving infrastructure career.</h2>
@@ -218,7 +269,7 @@ export default function Home() {
 
         <section className="section section-cream" aria-labelledby="credentials-title">
           <div className="section-label">
-            <div className="section-no">05 / BASE</div>
+            <div className="section-no">06 / BASE</div>
             <div><p className="section-kicker">Credentials & education</p><h2 className="section-title" id="credentials-title">Built on continuous learning and a geoscience foundation.</h2></div>
           </div>
           <div className="credentials">
@@ -238,8 +289,8 @@ export default function Home() {
           <div className="contact-topline">Next deployment</div>
           <h2 className="contact-title" id="contact-title"><a href="mailto:udoabraham73@gmail.com">Let’s make it<br />more reliable. <ArrowUpRight aria-hidden="true" /></a></h2>
           <div className="contact-grid">
-            <p>For a Cloud or DevOps opportunity, a collaborative build, or a conversation about automation and observability, I’d be glad to connect.</p>
-            <div className="contact-links"><a href="mailto:udoabraham73@gmail.com"><Mail size={15} />Email Abraham</a><a href="https://github.com/westgrin" target="_blank" rel="noreferrer"><Github size={15} />GitHub</a><a href="tel:+2348141892328"><CheckCircle2 size={15} />+234 814 189 2328</a></div>
+            <p>Send the next deployment brief, platform question, or reliability conversation. I am available to discuss Cloud and DevOps opportunities where practical automation matters.</p>
+            <div className="contact-links"><a href="mailto:udoabraham73@gmail.com"><Mail size={15} />Open email channel</a><a href="https://github.com/westgrin" target="_blank" rel="noreferrer"><Github size={15} />Inspect GitHub record</a><a href="tel:+2348141892328"><CheckCircle2 size={15} />Open phone channel</a></div>
           </div>
         </section>
         <footer className="footer"><span className="footer-brand"><img src="/manus-storage/abraham-udo-logo-mark_5760a7d8.png" alt="" /><strong>AU/</strong> © 2026 Abraham Udo</span><a href="#top">Return to top ↑</a></footer>

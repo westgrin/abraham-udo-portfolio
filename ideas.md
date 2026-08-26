@@ -72,3 +72,6 @@ The wordmark uses a split-weight “AU/” monogram paired with **Abraham Udo** 
 - The signal line is a cross-page identity system: major section numbers, operational labels, timeline records, and navigation cues visibly attach to the continuous ledger spine.
 - The AU/ routing-glyph mark and monogram form a persistent identity layer in the hero, navigation, and footer rather than functioning as a hidden decorative asset.
 - Telemetry Teal `#00B893` is reserved for health signals, primary actions, project IDs, and key outcome phrases; it is not a general-purpose decorative color.
+- Telemetry Teal must not dominate a full section; it appears through health states, primary actions, project IDs, ledger lines, and evidence phrases.
+- The AU/ routing glyph functions as a visible identity device in the hero, the persistent rail, recurring section records, and the footer.
+- Infrastructure imagery favors authored routing paths, monitoring traces, deployment maps, grid surfaces, and system diagrams rather than generic technology atmosphere.
