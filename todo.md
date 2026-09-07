@@ -13,3 +13,9 @@
 - [x] Inspect the browser console error shown in the preview and record the exact cause: two timeline entries shared the `Industrial Intern` React list key.
 - [x] Apply the smallest safe correction and verify that the error no longer appears.
 - [x] Run production validation, save a publish-ready checkpoint, and provide publication guidance.
+
+## Humanized Copy and GitHub Deployment Package
+
+- [x] Rewrite the portfolio write-ups in a direct, natural professional voice while retaining only verified technical claims.
+- [ ] Prepare a self-contained copy of the website with local assets and GitHub Pages deployment configuration.
+- [ ] Validate the updated source, create the ZIP archive, and provide concise GitHub deployment steps.
